@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   namespace: jenkins
 spec:
-  serviceAccountName: jenkins
+  serviceAccountName: jenkins-sa
   containers:
     - name: docker
       image: docker
