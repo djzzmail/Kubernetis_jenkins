@@ -1,8 +1,8 @@
 pipeline {
     environment {
-        PROJECT = "PROJECT"
+        PROJECT = "jenkinscicd-345611"
         APP_NAME = "flaskhelloworld"
-        CLUSTER = "CLUSTER"
+        CLUSTER = "jenkins-cd"
         CLUSTER_ZONE = "europe-west1"
         IMAGE_TAG = "eu.gcr.io/${PROJECT}/${APP_NAME}:${env.BUILD_NUMBER}"
         JENKINS_CRED = "${PROJECT}"
