@@ -5,7 +5,7 @@ metadata:
   annotations:
     cloud.google.com/neg: '{"ingress": true}'
 spec:
-  type: NodePort
+  type: LoadBalancer
   selector:
     app: flaskhelloworld
   ports:
