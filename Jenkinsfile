@@ -20,7 +20,7 @@ pipeline {
                 container('docker') {
                     script {
                         def app = docker.build("eu.gcr.io/${PROJECT}/${APP_NAME}")
-                        docker.withRegistry('https://eu.gcr.io', "gcr:cd-jenkins") {
+                        docker.withRegistry('https://eu.gcr.io', "gcr:${JENKINS_CRED}") {
                             app.push("${env.BUILD_NUMBER}")
                             app.push("latest")
                         }
