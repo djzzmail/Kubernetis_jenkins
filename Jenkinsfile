@@ -32,7 +32,7 @@ pipeline {
             steps {
                 container('kubectl') {
                     sh("sed -i.bak 's#eu.gcr.io/${PROJECT}/${APP_NAME}:0.0.0#${IMAGE_TAG}#' ./k8s/deployment.yaml")
-                    step([$class: 'KubernetesEngineBuilder', namespace: "default", projectId: env.PROJECT, clusterName: env.CLUSTER, zone: env.CLUSTER_ZONE, manifestPattern: 'k8s/deployment.yaml', credentialsId: "gcr:${JENKINS_CRED}", verifyDeployments: true])
+                    step([$class: 'KubernetesEngineBuilder', namespace: "default", projectId: env.PROJECT, clusterName: env.CLUSTER, zone: env.CLUSTER_ZONE, manifestPattern: 'k8s/deployment.yaml', credentialsId:  env.JENKINS_CRED, verifyDeployments: true])
                     step([$class: 'KubernetesEngineBuilder', namespace: "default", projectId: env.PROJECT, clusterName: env.CLUSTER, zone: env.CLUSTER_ZONE, manifestPattern: 'k8s/service.yaml', credentialsId: env.JENKINS_CRED, verifyDeployments: true])
                 }
             }
