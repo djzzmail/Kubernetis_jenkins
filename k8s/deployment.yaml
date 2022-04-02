@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flaskhelloworld
-        image: eu.gcr.io/jenkinscicd-345611/flaskhelloworld:0.0.0
+        image: eu.gcr.io/vernal-tiger-346023/flaskhelloworld:0.0.0
         imagePullPolicy: Always
         ports:
         - containerPort: 8181
