@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        PROJECT = "jenkinscicd-345611"
+        PROJECT = "vernal-tiger-346023"
         APP_NAME = "flaskhelloworld"
         CLUSTER = "jenkins-cd"
         CLUSTER_ZONE = "europe-west1-b"
